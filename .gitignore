@@ -10,3 +10,5 @@
 !**/Go/src/*.go
 **/node_modules/*
 .idea
+JMS/target/maven-archiver/pom.properties
+JMS/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst

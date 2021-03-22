@@ -1,0 +1,11 @@
+{
+  "MQ_ENDPOINTS": [{
+    "HOST": "172.21.2.206",
+    "PORT": "1414",
+    "CHANNEL": "MQ.QS.SVRCONN",
+    "QMGR": "QUICKSTART",
+    "APP_USER": "nastacio",
+    "QUEUE_NAME": "Cases",
+    "DYNAMIC_QUEUE_PREFIX": "APP.REPLIES.*"
+  }]
+}
