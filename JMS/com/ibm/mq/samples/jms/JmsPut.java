@@ -81,7 +81,7 @@ public class JmsPut {
         logger.info("producer created");
 
         for (int i = 1; i <= 10; i++) {
-            TextMessage message = context.createTextMessage("This is message number " + i + ".");
+            TextMessage message = context.createTextMessage("This is updated message number " + i + ".");
             producer.send(destination, message);
         }
         logger.info("Sent all messages!");
