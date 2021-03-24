@@ -82,7 +82,11 @@ public class JmsPut {
 
         for (int i = 1; i <= 10; i++) {
             TextMessage message = context.createTextMessage("This is updated message number " + i + ".");
+            Thread.sleep(10000);
             producer.send(destination, message);
+        }
+        for (int i = 1; i <= 10000; i++) {
+            Thread.sleep(10000);
         }
         logger.info("Sent all messages!");
     }
