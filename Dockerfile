@@ -23,7 +23,5 @@ WORKDIR /project
 COPY --from=build /project/target/javax.jms-api.jar .
 COPY --from=build /project/target/com.ibm.mq.allclient.jar .
 COPY --from=build /project/target/mq-dev-patterns-0.1.0.jar mq-dev-patterns.jar
-COPY env-mock.json /env.json
-
 
 ENTRYPOINT ["/usr/local/openjdk-11/bin/java", "-cp", "./com.ibm.mq.allclient.jar:./javax.jms-api.jar:./mq-dev-patterns.jar", "com.ibm.mq.samples.jms.JmsPut"]
