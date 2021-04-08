@@ -81,10 +81,22 @@ public class JmsPut {
         logger.info("producer created");
 
         for (int i = 1; i <= 10; i++) {
-            TextMessage message = context.createTextMessage("This is message number " + i + ".");
+            TextMessage message = context.createTextMessage("This is updated message number " + i + ".");
             producer.send(destination, message);
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                // no-op
+            }
         }
         logger.info("Sent all messages!");
+        for (int i = 1; i <= 10000; i++) {
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                // no-op
+            }
+        }
     }
 
     private static void mqConnectionVariables() {
