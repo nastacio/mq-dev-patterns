@@ -31,7 +31,7 @@ const fs = require('fs');
 const mq = require('ibmmq');
 
 // Load up missing envrionment variables from the env.json file
-var env = require('../env.json');
+var env = require('/config/env.json');
 
 var MQC = mq.MQC;
 
@@ -215,5 +215,10 @@ mq.Connx(MQDetails.QMGR, cno, function(err, hConn) {
   }
 
 });
+
+let i = 0;
+setInterval(() => {
+    console.log('Infinite Loop n:', i++);
+}, 10000)
 
 debug_info('Application Start Completed');
