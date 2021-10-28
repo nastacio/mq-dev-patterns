@@ -104,7 +104,7 @@ Let's say you're already running MQ in a Docker container without TLS having set
 
 Now you want to run the second Docker container to try the samples with TLS switched on.
 
-You can have the same MQ objects set up in both, and switch between them by using the host port forwarding to make the non TLS queue manager available on port 1414 and the TLS one on port 1415.
+You can have the same MQ objects set up in both, and switch between them by using the host port forwarding to make the non TLS queue manager available on port 1414 and the TLS one on port 1415. 
 
 #### Creating self signed certificates by using `openssl`
 
