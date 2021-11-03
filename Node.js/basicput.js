@@ -31,7 +31,7 @@ const fs = require('fs');
 const mq = require('ibmmq');
 
 // Load up missing envrionment variables from the env.json file
-var env = require('/config/env.json');
+var env = require(process.env.SERVICE_BINDING_ROOT + '/env.json');
 
 var MQC = mq.MQC;
 
