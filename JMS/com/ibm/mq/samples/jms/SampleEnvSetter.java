@@ -44,7 +44,7 @@ public class SampleEnvSetter {
 
         try {
             JSONParser parser = new JSONParser();
-            Object data = parser.parse(new FileReader(System.getenv("SERVICE_BINDING_ROOT")+ "/env.json"));
+            Object data = parser.parse(new FileReader(System.getenv("SERVICE_BINDING_ROOT")+ "/binding-request/env.json"));
             logger.info("File read");
 
             mqEnvSettings = (JSONObject) data;
